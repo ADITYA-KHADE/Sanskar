@@ -2,6 +2,8 @@ import HeroSection from "./components/HeroSection";
 import HeroProduct from "./components/HeroProduct";
 import ProductCatalog from "./components/ProductCatalog";
 import ProductDetail from "./components/ProductDetail";
+import NeemDetail from "./components/NeemDetail";
+
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
       <HeroProduct/>
       <ProductCatalog/>
       <ProductDetail/>
+      <NeemDetail/>
     </div>
   );
 }
