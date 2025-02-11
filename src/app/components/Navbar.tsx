@@ -51,12 +51,13 @@ const Navbar = () => {
           <button className="text-gray-800 hover:text-gray-600">
             <User size={20} />
           </button>
-          <button className="relative text-gray-800 hover:text-gray-600">
+          
+          <Link href="/cart" className="relative text-gray-800 hover:text-gray-600">
             <ShoppingCart size={20} />
             <span className="absolute -top-2 -right-2 bg-green-500 text-white rounded-full w-4 h-4 text-xs flex items-center justify-center">
               1
             </span>
-          </button>
+          </Link>
 
           {/* Hamburger Menu for Mobile */}
           <button
