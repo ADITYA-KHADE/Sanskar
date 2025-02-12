@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-yellow-400 p-4">
+    <nav className="bg-yellow-400 p-4 border-b-2  border-black">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -48,9 +48,9 @@ const Navbar = () => {
           <button className="text-gray-800 hover:text-gray-600">
             <Search size={20} />
           </button>
-          <button className="text-gray-800 hover:text-gray-600">
+          <Link href="/account/login" className="text-gray-800 hover:text-gray-600">
             <User size={20} />
-          </button>
+          </Link>
           
           <Link href="/cart" className="relative text-gray-800 hover:text-gray-600">
             <ShoppingCart size={20} />

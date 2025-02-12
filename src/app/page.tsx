@@ -5,7 +5,7 @@ import ProductDetail from "./components/ProductDetail";
 import NeemDetail from "./components/NeemDetail";
 import { BenefitsSection } from "./components/sections/benefits"
 import { ConcernsSection } from "./components/sections/concerns"
-import { WhatsAppButton } from "./components/whatsapp-button"
+import { WhatsAppFAB } from "./components/WhatsAppFAB"
 
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <NeemDetail/>
       <BenefitsSection/>
       <ConcernsSection/>
-      <WhatsAppButton/>
+      <WhatsAppFAB/>
     </div>
   );
 }
