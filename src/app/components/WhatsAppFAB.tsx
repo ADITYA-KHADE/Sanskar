@@ -21,28 +21,28 @@ export function WhatsAppFAB() {
     <div className="fixed bottom-4 right-4 flex flex-col items-end space-y-2">
       {isOpen && (
         <>
-          <Button
+          <button
             onClick={handleWhatsAppClick}
-            className="rounded-full bg-green-500 shadow-lg flex items-center justify-center w-12 h-12"
+            className="rounded-full bg-green-500 hover:bg-green-600 shadow-lg flex items-center justify-center w-12 h-12"
           >
             <MessageCircle className="w-6 h-6 text-white" />
-          </Button>
+          </button>
 
-          <Button
+          <button
             onClick={handleCallClick}
-            className="rounded-full bg-green-400 shadow-lg flex items-center justify-center w-12 h-12"
+            className="rounded-full bg-green-400 hover:bg-green-500 shadow-lg flex items-center justify-center w-12 h-12"
           >
             <Phone className="w-6 h-6 text-white" />
-          </Button>
+          </button>
         </>
       )}
 
-      <Button
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="rounded-full bg-purple-500 shadow-lg flex items-center justify-center w-12 h-12"
+        className="rounded-full bg-purple-500 hover:bg-purple-600 shadow-lg flex items-center justify-center w-12 h-12"
       >
         <X className="w-6 h-6 text-white" />
-      </Button>
+      </button>
     </div>
   );
 }

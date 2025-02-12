@@ -86,7 +86,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {availableAtLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="hover:text-rose-200 transition-colors">
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-rose-200 transition-colors"
+                  >
                     {link.name}
                   </a>
                 </li>
@@ -96,9 +101,11 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="md:col-span-2 lg:col-span-2">
-            <form onSubmit={handleSubmit} className=" bg-primary/10 p-8 rounded-lg">
+            <form onSubmit={handleSubmit} className="bg-primary/10 p-8 rounded-lg">
               <h2 className="text-2xl font-semibold mb-4">Subscribe to Our Newsletter</h2>
-              <p className="mb-4">Stay updated with our latest products and offers!</p>
+              <p className="mb-4">
+                Stay updated with our latest products and offers!
+              </p>
               <div className="flex gap-4">
                 <Input
                   type="email"
@@ -106,6 +113,7 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  autoComplete="off"
                   className="flex-1"
                 />
                 <Button type="submit">Subscribe</Button>
@@ -125,7 +133,14 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex gap-6">
               {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-rose-200 transition-colors" aria-label={label}>
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-rose-200 transition-colors"
+                  aria-label={label}
+                >
                   <Icon className="w-6 h-6" />
                 </a>
               ))}

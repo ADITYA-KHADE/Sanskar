@@ -3,9 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Toaster } from "@/components/ui/toaster";
-// import { Analytics } from "@/components/analytics";
-import { CartProvider } from "@/providers/cart-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sanskar Store - Traditional Indian Products",
-  description: "Shop authentic Indian traditional products, agarbattis, and more",
+  description:
+    "Shop authentic Indian traditional products, agarbattis, and more",
 };
 
 export default function RootLayout({
@@ -29,19 +27,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <CartProvider>
-          <div className="bg-[#FFB800] min-h-screen">
-            <div className="bg-[#E91E63] text-white text-center py-2">
-              Free shipping on orders above ₹499!
-            </div>
-            <Navbar />
-            {children}
-            <Footer />
-            <Toaster />
-            {/* <Analytics /> */}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <div className="bg-[#FFB800] min-h-screen">
+          <div className="bg-[#E91E63] text-white text-center py-2">
+            Free shipping on orders above ₹499!
           </div>
-        </CartProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
